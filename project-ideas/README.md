@@ -1,3 +1,4 @@
-# Projects 🚀
+# Project Ideas
 
-This folder contains my fullstack and side projects. Each project lives in its own folder with frontend, backend, and documentation.
+This folder contains drafts, notes, and experiments.
+For full projects, check out my other repositories:
