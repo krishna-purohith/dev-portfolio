@@ -1,0 +1,22 @@
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
+
+        while (list1!= null && list2 != null){
+            // [1, 2, 3] [2, 3, 4, 5, 6]
+            if (list1.val > list2.val) {
+                current.next = list2;
+                list2 = list2.next;
+            } else {
+                current.next = list1;
+                list1 = list1.next;
+            }
+
+            current = current.next;
+            // [1, 2, 2, 3, ]
+                
+                
+        }
+
+        current.next = (list1 != null) ? list1 : list2;
+
+        return dummy.next;
