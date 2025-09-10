@@ -1,0 +1,24 @@
+Factorial
+        // Factorial(n!) = n * (n - 1) * (n - 2) * (n - 3) * (n - 4) * ...... * 1
+        // Base case. This stops the recursion to prevent it from running infinite times.
+        // Recursive case. Function calls itself with smaller simpler inputs.
+
+        // Base condition: if (n == 0) return  1
+        // Recursive case: return n * factorial(n - 1) 
+
+        int factorial(int n) {
+            if (n == 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+
+        Flow: 
+        factorial(3)
+        = n * factorial(2)
+        = 3 * 2 * factorial(1)
+        = 3 * 2 * 1 * factorial(0)
+        = 3 * 2 * 1 * 1
+        = 6                  
+                     
+                     
