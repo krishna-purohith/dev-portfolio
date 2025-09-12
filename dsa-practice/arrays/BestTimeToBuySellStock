@@ -1,0 +1,47 @@
+class Solution {
+    public int maxProfit(int[] prices) {
+        //  [7, 2, 5, 1, 6]
+
+        int first = 0;
+        int second = 1;
+        int maxProfit = 0;
+        while(second < prices.length) {
+            if (prices[first] <= prices[second]) {
+                int diff = prices[second] - prices[first];
+                if (diff > maxProfit) maxProfit = diff;
+                second++;
+                
+            } else {
+                first = second;
+                second++;
+            }
+        }
+        return maxProfit;
+    }
+}
+
+
+
+
+
+
+class Solution {
+    public int maxProfit(int[] prices) {
+        //  [7, 2, 5, 1, 6]
+        int minPrice = Integer.MAX_VALUE;
+        int maxProfit = 0;
+
+        for (int price : prices) {
+            if (price < minPrice) {
+                minPrice = price;
+            } else {
+                maxProfit = Math.max(maxProfit, price - minPrice);
+            }
+        }
+
+        return maxProfit;
+
+        
+        
+    }
+}
