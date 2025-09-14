@@ -1,0 +1,29 @@
+class Solution {
+    public List<Integer> selfDividingNumbers(int left, int right) {
+        List<Integer> list = new ArrayList<>();
+
+        for (int i = left; i <= right; i++) {
+            if (dividingNumber(i)) {
+                list.add(i);
+            }
+        }
+
+        return list;
+    }
+
+    private boolean dividingNumber(int number) {
+        // 154
+        int original = number;
+        while(number > 0) {
+            int digit = number % 10; // 4
+            if (digit != 0 && original % digit == 0) {
+            } else {
+                return false;
+            }
+            number = number / 10;
+            
+        }
+        return true;
+    }
+}
+
